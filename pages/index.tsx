@@ -2,8 +2,22 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import {useEffect, useRef} from "react";
 
 const Home: NextPage = () => {
+  const refFirstRef = useRef(true);
+
+  useEffect(() => {
+    if (process.env.NODE_ENV === "development") {
+      if (refFirstRef.current) {
+        refFirstRef.current = false;
+        return;
+      }
+    }
+    // @ts-ignore
+    fetch(process.env.NEXT_PUBLIC_LAMBDA_URL)
+  }, [])
+
   return (
     <div className={styles.container}>
       <Head>
