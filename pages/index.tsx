@@ -49,7 +49,7 @@ const Home: NextPage = () => {
       console.log('stop!!!')
       setTimeout(() => {
         location.reload()
-      }, 5000)
+      }, 10000)
     },
     ref: text3Ref
   })
