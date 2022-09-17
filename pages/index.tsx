@@ -44,12 +44,12 @@ const Home: NextPage = () => {
       duration: 1000,
       easing: easings.easeInOutQuart
     },
-    onRest: () => {
+    onStart: () => {
       stopServer()
       console.log('stop!!!')
       setTimeout(() => {
-        location.href= 'https://www.google.com/'
-      }, 10000)
+        location.href = 'https://marriage.cheap-lab.tech'
+      }, 15000)
     },
     ref: text3Ref
   })
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
         <div className={styles.textBox}>
           <animated.p style={props1} className={styles.message}>梶野<br/>結婚おめでとう!!</animated.p>
           <animated.p style={props2} className={styles.message}>末長くお幸せに🎉</animated.p>
-          <animated.p style={props3} className={styles.smallMessage}>このメッセージは5秒後に<br/>自動的に消滅する</animated.p>
+          <animated.p style={props3} className={styles.smallMessage}>このメッセージは10秒後に<br/>自動的に消滅する</animated.p>
         </div>
       </main>
     </div>
