@@ -48,7 +48,7 @@ const Home: NextPage = () => {
       stopServer()
       console.log('stop!!!')
       setTimeout(() => {
-        location.reload()
+        location.href= 'https://www.google.com/'
       }, 10000)
     },
     ref: text3Ref
